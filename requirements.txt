@@ -1,0 +1,8 @@
+pandas
+seaborn
+statsmodels
+scikit-learn
+numpy
+flask
+flask_googlemaps
+keras

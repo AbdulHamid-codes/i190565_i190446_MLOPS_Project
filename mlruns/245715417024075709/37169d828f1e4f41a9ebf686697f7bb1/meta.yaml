@@ -1,0 +1,15 @@
+artifact_uri: mlflow-artifacts:/245715417024075709/37169d828f1e4f41a9ebf686697f7bb1/artifacts
+end_time: 1686496646025
+entry_point_name: ''
+experiment_id: '245715417024075709'
+lifecycle_stage: active
+run_id: 37169d828f1e4f41a9ebf686697f7bb1
+run_name: RideEz model example
+run_uuid: 37169d828f1e4f41a9ebf686697f7bb1
+source_name: ''
+source_type: 4
+source_version: ''
+start_time: 1686496643861
+status: 4
+tags: []
+user_id: Abdul Hamid

@@ -1,0 +1,15 @@
+artifact_uri: mlflow-artifacts:/245715417024075709/682425d7d128480e86788f4eb9419d00/artifacts
+end_time: 1686496775948
+entry_point_name: ''
+experiment_id: '245715417024075709'
+lifecycle_stage: active
+run_id: 682425d7d128480e86788f4eb9419d00
+run_name: unruly-grouse-1
+run_uuid: 682425d7d128480e86788f4eb9419d00
+source_name: ''
+source_type: 4
+source_version: ''
+start_time: 1686496770530
+status: 4
+tags: []
+user_id: Abdul Hamid
