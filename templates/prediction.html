@@ -1,0 +1,13 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Prediction Page</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/showPrediction.css') }}">
+  </head>
+  <body>
+    <h1>Prediction Data</h1>
+    <p>Region Id:  {{ data.region_id }}</p>
+    <p>Time Slot:  {{ data.time_slot }}</p>
+    <p>Predicted Demand-Supply Gap:  {{ data.gap }}</p>
+  </body>
+</html>

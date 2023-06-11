@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Options page</title>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto+Slab&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Roboto+Slab&family=Source+Sans+Pro:wght@200;400&display=swap">
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/optionPage.css') }}">
+  </head>
+  <body>
+    <div class = "heading">
+    <h1>Ride-EZ Admin</h1>
+    </div>
+    <br></br>
+    <div class = buttons>
+
+    <button type="button" onclick="window.location.href='{{ url_for( 'demand_supply') }}';">Supply-Demand </button>
+
+    <button type="button" onclick="window.location.href='{{ url_for( 'ride_cancellation') }}';" style="--c:#E95A49">Ride Cancellation</button>
+    <div>
+</body>
+</html>

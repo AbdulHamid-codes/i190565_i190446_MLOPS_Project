@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Flask App</title>
+  <link rel="stylesheet" href="{{ url_for('static', filename='css/demand_supply.css') }}">
+</head>
+<body>
+
+  <div id="googleMap"></div>
+
+  <script>
+    function myMap() {
+      var mapProp= {
+      center:new google.maps.LatLng(33.6565,73.0154),
+      zoom:10,
+    };
+    var map = new google.maps.Map(document.getElementById("googleMap"),mapProp);  
+    }
+  </script>
+  <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyB9bu5z1owD3Mg3ZkDfYlRuyXMsJvlzCBs&callback=myMap"></script>
+  <div id="mlForm">
+  <h1>Predict Deman and Supply Gap</h1>
+  <form  action="{{ url_for('submit_form') }}" method="POST">
+    <label for="name">region_id:</label>
+    <input type="number" id="region_id" name="region_id"><br>
+
+    <label for="low">Time Slot:</label>
+    <input type="number" id="time_slot" name="time_slot"><br>
+
+    <input type="submit" value="Predict">
+  </form>
+</div>
+</body>
+
+</html>

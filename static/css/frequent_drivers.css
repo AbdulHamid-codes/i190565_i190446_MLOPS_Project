@@ -1,0 +1,10 @@
+body {
+    height: 100vh;
+    /* margin-top: 50; */
+     /* display: grid;  */
+    place-content: center;
+    /* grid-auto-flow: column; */
+    gap: 40px;
+    background: #F2DCA2;
+    text-align: center;
+  }
