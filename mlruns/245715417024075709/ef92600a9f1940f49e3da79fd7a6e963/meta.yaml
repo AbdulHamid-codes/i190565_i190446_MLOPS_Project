@@ -1,0 +1,15 @@
+artifact_uri: mlflow-artifacts:/245715417024075709/ef92600a9f1940f49e3da79fd7a6e963/artifacts
+end_time: 1686496866924
+entry_point_name: ''
+experiment_id: '245715417024075709'
+lifecycle_stage: active
+run_id: ef92600a9f1940f49e3da79fd7a6e963
+run_name: sincere-lark-251
+run_uuid: ef92600a9f1940f49e3da79fd7a6e963
+source_name: ''
+source_type: 4
+source_version: ''
+start_time: 1686496809764
+status: 4
+tags: []
+user_id: Abdul Hamid

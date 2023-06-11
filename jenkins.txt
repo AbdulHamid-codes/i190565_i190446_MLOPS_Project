@@ -1,0 +1,57 @@
+pipeline {
+    agent any
+
+    environment {
+        registry = "mlops_project"
+        imageName = "ridez-app" // Use a fixed image name
+        dockerImage = ''
+        dockerCred = 'hammad496'
+    }
+
+    stages {
+        stage('Build') {
+            steps {
+                git branch: 'main', url: 'https://github.com/AbdulHamid-codes/i190565_i190446_MLOPS_Project'
+                script {
+                    // Use the build number as a tag for the image
+                    dockerImage = docker.build("${registry}/${imageName}:${env.BUILD_NUMBER}")
+                }
+            }
+        }
+        
+        stage('Push') {
+            steps {
+                script {
+                    docker.withRegistry("", dockerCred) {
+                        // Push the image with both the build number and the latest tag
+                        dockerImage.push("${env.BUILD_NUMBER}")
+                        dockerImage.push("latest")
+                    }
+                }
+            }
+        }
+
+        stage('Stop and remove previous container') {
+            steps {
+                script {
+                    sh 'docker ps -f name=${imageName} -q | xargs --no-run-if-empty docker container stop'
+                    sh 'docker container ls -a -f name=${imageName} -q | xargs -r docker container rm'
+                }
+            }
+        }
+        
+ 
+        
+        // stage('Launch container') {
+        //     steps {
+        //         script {
+        //             docker.withRegistry(env.DOCKER_REGISTRY, dockerCred) {
+        //                 docker.image("${registry}/${imageName}").run("-p 5001:5001 --name ${imageName}")
+        //             }
+        //         }
+        //     }
+        // }
+        
+        
+    }
+}
